@@ -11,8 +11,8 @@
 #   1.scapy
 #   2.colorama
 #
-#               coded by: @nibrasmuhamed #Github
-#                       @nibras_muhamed #Instagram
+#          code contributed by: @nibrasmuhamed on Github
+#                       @nibras_muhamed on Instagram
 #
 #
 import scapy.all as scapy
@@ -21,7 +21,7 @@ import argparse
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-t" , dist="target", help="Enter your gateway with subnet(for eg:192.168.1.1/24)")
+    parser.add_argument("-t" , dest="target",  help="Enter your gateway with subnet(for eg:192.168.1.1/24)")
     option = parser.parse_args()
     return option
 
