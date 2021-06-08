@@ -3,7 +3,7 @@
 #
 # This python script using scapy module will scan your network and returns all the clients
 # within the network.
-# 
+#
 # this script should run with python 2.7 or python 3. any way you need to install dependencies
 # for curresponding version
 #
@@ -21,7 +21,8 @@ import argparse
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-t" , dest="target",  help="Enter your gateway with subnet(for eg:192.168.1.1/24)")
+    parser.add_argument(
+        "-t", dest="target",  help="Enter your gateway with subnet(for eg:192.168.1.1/24)")
     option = parser.parse_args()
     return option
 
@@ -42,7 +43,7 @@ def scan(ip):
 
 
 def print_all(result_list):
-    print("IP Address\t\t\tMac Adress\n-------------------------------------")
+    print("IP Address\t\t\tMac Adress\n---------------------------------------------------")
     for client in result_list:
         print(client["ip"] + "\t\t" + client["mac"])
 
