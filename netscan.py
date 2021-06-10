@@ -32,7 +32,6 @@ def scan(ip):
     broadcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
     arp_req_broadcast = broadcast/arp_req
     answered_lst = scapy.srp(arp_req_broadcast, timeout=1, verbose=False)[0]
-    print(answered_lst.summary())
     client_list = []
 
     for packet in answered_lst:
